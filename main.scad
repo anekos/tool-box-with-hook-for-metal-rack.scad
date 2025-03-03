@@ -10,10 +10,11 @@ r = 5;
 thickness = 2;
 
 hook_inner_size = 6;
-hook_thickness = 4;
-hook_nail_length = 30;
+hook_thickness = 8;
+hook_nail_length = 40;
 hook_width = 20;
 hook_inner_r = 2;
+hook_distance = 130;
 
 cells = 6;
 
@@ -100,12 +101,12 @@ module hook()
 
 module hooks()
 {
-    translate([ width / 3, 0, 0 ])
+    translate([ hook_distance / 2 + hook_width / 2, 0, 0 ])
     {
         hook();
     }
 
-    translate([ -width / 3, 0, 0 ])
+    translate([ -(hook_distance / 2 + hook_width / 2), 0, 0 ])
     {
         hook();
     }
